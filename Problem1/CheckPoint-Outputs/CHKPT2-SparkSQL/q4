@@ -1,0 +1,40 @@
+use xebia;
+select count(distinct district) as Dcount,state from aadhaar group by state order by Dcount;
+1	Lakshadweep
+1	Dadra and Nagar Haveli
+1	Others
+1	state
+2	Chandigarh
+2	Daman and Diu
+4	Puducherry
+4	Sikkim
+4	Andaman and Nicobar Islands
+6	Meghalaya
+7	Goa
+7	Mizoram
+8	Tripura
+9	Nagaland
+9	Manipur
+10	Telangana
+11	Delhi
+13	Himachal Pradesh
+15	Kerala
+15	Uttarakhand
+16	Arunachal Pradesh
+21	Haryana
+24	Jammu and Kashmir
+25	Punjab
+27	Assam
+29	Andhra Pradesh
+29	Jharkhand
+29	West Bengal
+33	Odisha
+33	Gujarat
+34	Chhattisgarh
+34	Rajasthan
+40	Tamil Nadu
+40	Bihar
+42	Maharashtra
+44	Karnataka
+50	Madhya Pradesh
+81	Uttar Pradesh

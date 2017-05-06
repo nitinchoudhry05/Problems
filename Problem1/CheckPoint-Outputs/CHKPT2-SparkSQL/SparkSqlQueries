@@ -1,0 +1,24 @@
+								Queries
+
+
+1.Describe the schema.
+SparkSqlQuery--> describe aadhaar;
+
+2.Find the count and names of registrars in the table.
+SparkSqlQuery-->select distinct district,count(district) as count  from aadhaar group by district order by count;
+
+3.Find the number of states, districts in each state and sub-districts in each district.
+SparkSqlQuery--> select count(distinct state) from aadhaar;
+SparkSqlQuery-->select count(distinct district) as Dcount,state from aadhaar group by state order by Dcount;
+SparkSqlQuery-->select count(distinct sub_district) as Dcount,district from aadhaar group by district order by Dcount; 
+
+4.Find the number of males and females in each state from the table and display a suitable plot.
+SparkSqlQuery-->select sum(case when gender='M' then aadhaar_generated end) as male_cnt,sum(case when gender='F' then aadhaar_generated end) as female_cnt,state from aadhaar group by state;
+
+5.Find out the names of private agencies for each state.
+SparkSqlQuery-->select distinct private_agency,state from aadhaar order by state;
+
+6.Plot the number of private agencies for each state.
+SparkSqlQuery-->select count(distinct private_agency),state from aadhaar group by state;        
+
+

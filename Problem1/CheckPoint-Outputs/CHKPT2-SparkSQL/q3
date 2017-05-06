@@ -1,0 +1,3 @@
+use xebia;
+select count(distinct state) from aadhaar;
+38

@@ -1,0 +1,15 @@
+use xebia;
+describe aadhaar;
+date	int	NULL
+registrar	string	NULL
+private_agency	string	NULL
+state	string	NULL
+district	string	NULL
+sub_district	string	NULL
+pincode	int	NULL
+gender	string	NULL
+age	int	NULL
+aadhaar_generated	string	NULL
+rejected	string	NULL
+mobile_number	int	NULL
+email_id	string	NULL

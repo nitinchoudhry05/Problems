@@ -1,0 +1,746 @@
+use xebia;
+select distinct district,count(district) as count  from aadhaar group by district order by count;
+West Garo Hills	1
+Ukhrul	1
+Budgam	1
+East Kameng	1
+Serchhip	1
+Baudh	1
+Gariyaband 	1
+Mungeli 	1
+district	1
+West Siang	1
+East Siang	1
+Bandipur	1
+Tuticorin	1
+Surajpur 	1
+Dakshin Gangotri	1
+Ponda	1
+North Cachar Hills	1
+West Khasi Hills	1
+Tirap	1
+Jaintia Hills	2
+Amta - II	2
+Saiha	2
+Champhai	2
+Upper Siang	2
+Bicholim	2
+Longleng	2
+Tuensang	3
+Chamrajnagar	3
+Tawang	3
+Kokrajhar	3
+Goalpara	3
+Tiswadi	3
+Ri Bhoi	3
+Namsai	4
+Nilgiris	4
+Anugul	4
+Nicobar	4
+Anjaw	4
+West Kameng	4
+Darrang	5
+East Garo Hills	5
+Kolasib	5
+Lower Subansiri	5
+Bhabua	5
+Mahrajganj	5
+Mammit	5
+Changlang	6
+Gir Somnath	6
+Karbi Anglong	6
+Devbhumi Dwarka	6
+Domjur	7
+Kamrup Metro	8
+Hailakandi	8
+Mohali	9
+Nalbari	9
+Upper Subansiri	10
+Marigaon	10
+Leh	10
+Thoothukudi	10
+Karimganj	11
+Sant Ravidas Nagar Bhadohi	12
+Karim Nagar	12
+Debagarh	12
+Chirang	13
+Bongaigaon	13
+Udalguri	13
+Dhemaji	14
+Dhubri	14
+Jyotiba Phule Nagar	15
+Lakshadweep	16
+Baksa	17
+Jorhat	17
+Mon	18
+Boudh	19
+Dibrugarh	20
+Lakhimpur	21
+Aizawl	24
+Gomati	25
+Sonitpur	25
+Nuapada	27
+Lower Dibang Valley	27
+Bulandshahar	28
+Nayagarh	28
+Garhwal	28
+Ganderbal	29
+Sibsagar	29
+Tirupur	32
+Samba	32
+Reasi	34
+Tinsukia	36
+Cachar	36
+Ramban	36
+Bardez	36
+Kurung Kumey	37
+Shupiyan	37
+Barpeta	37
+East Khasi Hills	37
+Hardwar	38
+Kodarma	38
+Rajouri	39
+Kishtwar	43
+Lohit	44
+Tiruvarur	46
+Malkangiri	48
+Narayanpur	48
+Kamrup	49
+Arvalli	56
+Aurangabad(BH)	59
+Gajapati	62
+Karaikal	65
+Pakaur	65
+Phek	76
+Dantewada	76
+Firozpur	78
+Dhenkanal	81
+Kargil	82
+Mumbai City	85
+Doda	86
+Dhalai	94
+West Sikkim	96
+Golaghat	102
+Unakoti	106
+Angul	111
+Najafgarh	115
+Andamans	115
+Senapati	117
+Muktsar	118
+Kanyakumari	119
+Mungeli	121
+New Delhi	121
+Nabarangapur	122
+North Sikkim	127
+Surendranagar	129
+North And Middle Andaman	129
+Dadra and Nagar Haveli	132
+Pulwama	132
+Lunglei	134
+Zunheboto	137
+Kalahandi	139
+Chikmagalur	140
+Jharsuguda	142
+Kandhamal	144
+Thiruvarur	148
+Chikkamagaluru	150
+South Andaman	152
+Kohima	153
+Kanchipuram	160
+Chamarajanagar	165
+Sahibganj	166
+Sukma	167
+Rayagada	168
+Nagaon	169
+Punch	173
+Yanam	177
+Khowai	179
+South Sikkim	179
+Kulgam	181
+Hazaribag	184
+Wokha	184
+Bankura	190
+Uttar Bastar Kanker	195
+Lahul and Spiti	196
+Dakshin Bastar Dantewada	198
+Udhampur	200
+Mysuru	203
+Palghar	205
+Purba Medinipur	206
+Papum Pare	212
+Sonapur	214
+Kabeerdham	215
+Villupuram	223
+Pondicherry	227
+Raigad	228
+Sepahijala	229
+Sambalpur	247
+Nawanshahr	249
+Kathua	260
+Daman	269
+Bijapur(KAR)	269
+Ariyalur	270
+Bilaspur 	270
+East Sikkim	275
+Mokokchung	284
+Koraput	293
+South Tripura	304
+Janjgir Champa	308
+Dimapur	315
+Tamenglong	316
+The Dangs	318
+Kanniyakumari	318
+Kupwara	326
+Baramula	329
+Kondagaon	329
+Thoubal	332
+Chandel	346
+Srinagar	349
+Bandipore	360
+North Tripura	362
+Ballari	369
+Una	373
+Kodagu	381
+South Dinajpur	397
+Churachandpur	418
+Shivamogga	421
+Perambalur	424
+Theni	425
+Jajapur	425
+Raebareli	426
+Panchmahal	427
+The Nilgiris	436
+Rudraprayag	438
+Paschim Medinipur	442
+Birbhum	445
+Vijayapura	449
+Bishnupur	454
+Uttarkashi	465
+Neemuch	466
+Kishanganj	467
+Puducherry	470
+Rajnandgaon	475
+Burhanpur	480
+Kawardha	497
+Munger	501
+West Midnapore	503
+Mahoba	504
+Uttar Dinajpur	518
+Dharmapuri	526
+Chamoli	532
+Gariyaband	533
+Bemetara	538
+Sivaganga	541
+Tehri Garhwal	543
+Kanker	547
+Badgam	554
+Krishnagiri	558
+Baghpat	571
+Sheohar	594
+Fatehabad	594
+Surajpur	606
+Shaheed Bhagat Singh Nagar	608
+Kinnaur	617
+Bargarh	623
+Korba	652
+Pathankot	656
+Hassan	658
+Mayurbhanj	662
+Tumakuru	663
+Kalaburagi	686
+Ahmadabad	701
+Purulia	708
+Diu	711
+North Dinajpur	721
+Thoothukkudi	725
+Harda	728
+Dindigul	732
+Champawat	744
+Virudhunagar	754
+Fatehgarh Sahib	756
+Bastar	761
+Balod	763
+Jaisalmer	765
+Chamba	765
+Belagavi	771
+Bardhaman	782
+Dahod	786
+Puruliya	799
+Bangalore Rural	812
+Others	816
+Anantnag	820
+Latehar	823
+Bageshwar	825
+Ashok Nagar	826
+Gadag	831
+Mandsaur	836
+Narmada	836
+Lakhisarai	846
+Raigarh(MH)	852
+Ahmednagar	862
+Hapur	862
+Sheopur	863
+Faridkot	874
+Udupi	888
+Medinipur	898
+Jhunjhunu	916
+Ramanathapuram	923
+Gondia	924
+West Tripura	933
+Datia	935
+East Midnapore	937
+Jamtara	951
+Kendrapara	960
+Barabanki	961
+Ranga Reddy	971
+Yadgir	973
+Thanjavur	978
+Tiruchirappalli	1004
+Khorda	1007
+Bengaluru	1012
+Namakkal	1017
+Nainital	1021
+Alirajpur	1032
+Mahasamund	1048
+Almora	1055
+Jagatsinghapur	1056
+Dohad	1064
+Anuppur	1070
+Barddhaman	1070
+Pakur	1075
+Khunti	1082
+Imphal East	1084
+Sundergarh	1087
+Surguja	1090
+Tiruppur	1091
+Jhabua	1101
+Narsinghpur	1103
+Wayanad	1122
+Simdega	1133
+Pilibhit	1135
+Shajapur	1140
+Imphal West	1151
+Rewari	1161
+Barwani	1165
+Mahbubnagar	1170
+Jehanabad	1170
+North 24 Parganas	1173
+Solan	1181
+Kendujhar	1181
+Viluppuram	1193
+Porbandar	1200
+Sirmaur	1201
+Koriya	1216
+Sirohi	1218
+Arwal	1228
+Chikkaballapur	1232
+Udham Singh Nagar	1240
+South Twenty Four Parganas	1241
+Jashpur	1245
+Jammu	1254
+Chitrakoot	1257
+Sri Muktsar Sahib	1264
+Bidar	1281
+Lalitpur	1282
+Hasan	1302
+Central Delhi	1316
+Moga	1317
+Tapi	1324
+Gadchiroli	1328
+Pithoragarh	1333
+Nawada	1341
+Seraikela-Kharsawan	1344
+Ferozepur	1351
+Shrawasti	1356
+Janjgir-champa	1369
+Tumkur	1371
+Ratlam	1381
+Shimoga	1383
+Umaria	1389
+Darjeeling	1392
+Tiruvannamalai	1398
+Ganjam	1411
+Banka	1412
+Hingoli	1420
+Fazilka	1425
+Dewas	1426
+Raipur	1436
+Pauri Garhwal	1439
+Kasganj	1446
+Shamli	1448
+Mewat	1480
+Khandwa	1484
+Ramgarh	1497
+Mansa	1497
+Sahebganj	1498
+Bharuch	1505
+Palamu	1507
+Singrauli	1510
+Cuttack	1510
+Sultanpur	1517
+Karur	1518
+Khordha	1520
+Panchkula	1520
+Katni	1520
+Rupnagar	1522
+Idukki	1533
+Hathras	1533
+Barnala	1539
+Sirsa	1549
+Baloda Bazar	1566
+Firozabad	1568
+Panna	1576
+North East	1576
+Sant Kabir Nagar	1582
+Baleswar	1612
+Tikamgarh	1614
+Raisen	1620
+Hamirpur	1629
+Wardha	1647
+Kurukshetra	1651
+Baran	1656
+Erode	1671
+Kapurthala	1684
+Sheikhpura	1694
+Chickmagalur	1703
+Chatra	1726
+Tiruvallur	1730
+Mahendragarh	1735
+Bhandara	1744
+Auraiya	1745
+Dindori	1759
+Kannauj	1762
+Kasargod	1777
+Haveri	1787
+Banda	1791
+Mainpuri	1791
+Bilaspur	1792
+Jamui	1797
+Tarn Taran	1799
+North Delhi	1801
+Chennai	1812
+Lohardaga	1814
+Sonbhadra	1821
+Muzaffarnagar	1831
+Khagaria	1833
+Saharsa	1843
+Raichur	1849
+Jhajjar	1858
+Dholpur	1860
+Durg	1867
+Dhamtari	1869
+Balrampur	1888
+Bathinda	1895
+Chandigarh	1908
+Chamrajanagar	1922
+Haridwar	1927
+Tirunelveli	1929
+Bara Banki	1932
+Palamau	1934
+Mandla	1937
+Coimbatore	1941
+Rae Bareli	1956
+Pudukkottai	1960
+Dehradun	1968
+Koppal	1987
+Gopalganj	1991
+K.V.Rangareddy	1994
+Kaushambi	1999
+Sangrur	2003
+Bijapur	2017
+Chandauli	2019
+Kancheepuram	2026
+Uttara Kannada	2031
+Gulbarga	2036
+Khargone	2036
+Shahdol	2042
+West Singhbhum	2044
+Jalpaiguri	2057
+Hooghly	2061
+Mahabub Nagar	2074
+Hoshangabad	2080
+Vidisha	2081
+Kasaragod	2081
+North East Delhi	2097
+Rajsamand	2105
+Sidhi	2112
+Etah	2112
+Karnal	2112
+Tonk	2118
+Ganganagar	2120
+Ramanagar	2123
+South 24 Parganas	2123
+Amethi	2160
+Amroha	2162
+Jind	2171
+Faizabad	2172
+Bagalkot	2174
+Kaithal	2179
+Bhadrak	2179
+Rohtak	2195
+Rampur	2197
+Shivpuri	2197
+Ambedkar Nagar	2198
+Kolar	2202
+Guna	2204
+Katihar	2206
+Sant Ravidas Nagar	2213
+Malda	2231
+Washim	2231
+Vellore	2232
+Sambhal	2240
+Sindhudurg	2274
+Damoh	2275
+Dakshin Dinajpur	2290
+Shahjahanpur	2305
+Kullu	2305
+Koderma	2306
+Kanpur Dehat	2310
+Saharanpur	2310
+Bundi	2313
+SAS Nagar (Mohali)	2315
+Jamnagar	2321
+Jhansi	2350
+Mau	2360
+Pathanamthitta	2364
+Jhalawar	2365
+Moradabad	2377
+Unnao	2388
+Mandya	2395
+Bellary	2407
+Palwal	2407
+Bijnor	2424
+Kachchh	2456
+Cooch Behar	2466
+Sitamarhi	2467
+Siddharthnagar	2469
+Gondiya	2487
+Hoshiarpur	2491
+Navsari	2505
+South Goa	2539
+Balaghat	2540
+Chitradurga	2570
+Bhind	2596
+Sonipat	2624
+Basti	2624
+Garhwa	2626
+Shimla	2632
+Begusarai	2690
+Kaimur (Bhabua)	2691
+Yamuna Nagar	2713
+Jalaun	2714
+Panchmahals	2715
+Fatehpur	2722
+Hisar	2728
+Patan	2731
+Budaun	2736
+Gonda	2737
+Chittorgarh	2773
+Davangere	2777
+Banswara	2781
+Anantapur	2781
+Madhepura	2792
+Betul	2806
+Gumla	2808
+Supaul	2823
+Hanumangarh	2836
+Araria	2840
+Ambala	2846
+Panipat	2864
+Kangra	2868
+Dungarpur	2895
+Dhar	2899
+Siwan	2903
+Balangir	2911
+Nalanda	2917
+Godda	2926
+Kheda	2964
+Buxar	2966
+Kheri	3002
+Jalor	3008
+Gautam Buddha Nagar	3009
+Bareilly	3014
+Gaya	3019
+Mirzapur	3027
+Mumbai( Sub Urban )	3028
+Bhojpur	3061
+Mathura	3069
+Gwalior	3071
+Kottayam	3079
+Deoghar	3080
+Junagadh	3082
+Jalna	3088
+Gurgaon	3094
+Karauli	3108
+Rajgarh	3108
+Chhatarpur	3118
+Nellore	3124
+Chhindwara	3143
+Morena	3159
+Dausa	3168
+Sawai Madhopur	3175
+Sehore	3208
+Puri	3210
+Ballia	3217
+Salem	3227
+Valsad	3243
+Banaskantha	3247
+Etawah	3260
+Amreli	3268
+Bahraich	3271
+Gandhinagar	3281
+Nagapattinam	3309
+Maharajganj	3338
+Amritsar	3340
+Bharatpur	3354
+Mysore	3396
+Surendra Nagar	3397
+Bhiwani	3400
+Meerut	3427
+Vaishali	3457
+Churu	3470
+Satna	3475
+Parbhani	3486
+Osmanabad	3508
+Ujjain	3514
+Patiala	3518
+Bikaner	3525
+Sagar	3539
+North Goa	3550
+Madurai	3556
+Bhavnagar	3598
+Deoria	3631
+Nadia	3636
+Saran	3671
+Adilabad	3699
+Seoni	3722
+Jhunjhunun	3741
+Bokaro	3745
+Mahesana	3789
+Hazaribagh	3810
+Kolkata	3810
+Farrukhabad	3812
+Dhanbad	3820
+Hardoi	3867
+Vizianagaram	3881
+Latur	3886
+Sitapur	3889
+Jalandhar	3913
+Dhule	3960
+Cuddalore	4001
+Palakkad	4009
+South West Delhi	4015
+Darbhanga	4023
+Dumka	4035
+Bhagalpur	4040
+Faridabad	4045
+East Singhbhum	4049
+West Champaran	4134
+Jabalpur	4138
+Nandurbar	4234
+Dakshina Kannada	4236
+Ghazipur	4249
+Nalgonda	4291
+Kushinagar	4391
+Purnia	4405
+Gurdaspur	4414
+Akola	4458
+Aligarh	4464
+Murshidabad	4517
+Bulandshahr	4525
+Mahabubnagar	4529
+Dharwad	4560
+Agra	4592
+East Delhi	4627
+Kota	4642
+Chandrapur	4678
+Varanasi	4722
+Raigarh	4725
+Gorakhpur	4726
+Ahmadnagar	4754
+Allahabad	4801
+Buldhana	4828
+Bhilwara	4918
+Rajkot	5008
+Ananthapur	5018
+Rewa	5027
+Rohtas	5033
+Kanpur Nagar	5038
+Satara	5126
+Howrah	5133
+Pratapgarh	5148
+Pali	5165
+Samastipur	5183
+Barmer	5191
+Beed	5269
+Guntur	5445
+Ranchi	5448
+East Champaran	5477
+Ghaziabad	5544
+Indore	5545
+Cuddapah	5575
+Bhopal	5649
+Krishna	5651
+Sangli	5680
+Sabarkantha	5742
+Surat	5842
+Giridih	5880
+Mandi	5908
+Visakhapatnam	5970
+Anand	5979
+East Godavari	6030
+Ajmer	6205
+Khammam	6213
+West Delhi	6278
+Muzaffarpur	6300
+Azamgarh	6451
+Chittoor	6473
+Vadodara	6595
+Sikar	6624
+Udaipur	6690
+Nizamabad	6718
+South Delhi	6766
+Srikakulam	6900
+Warangal	6939
+Belgaum	6974
+Kurnool	6999
+Ahmedabad	7044
+Nanded	7171
+Kollam	7178
+Medak	7210
+Alappuzha	7268
+Jaunpur	7371
+Madhubani	7415
+Alwar	7438
+Jodhpur	7546
+Prakasam	7570
+Lucknow	7590
+Nagaur	7858
+Patna	7868
+North West Delhi	8205
+Ludhiana	8229
+Ahmed Nagar	8277
+Kozhikode	8335
+Solapur	8342
+Kannur	8476
+Yavatmal	8641
+Kolhapur	8743
+West Godavari	8771
+Ratnagiri	9423
+Thiruvananthapuram	9512
+Karimnagar	9649
+Thrissur	9666
+Ernakulam	9772
+Malappuram	10045
+Aurangabad	10873
+Hyderabad	11314
+Nashik	11449
+Jalgaon	11773
+K.v. Rangareddy	11904
+Amravati	12202
+Jaipur	17209
+Nagpur	17412
+Bangalore	22185
+Thane	27848
+Mumbai	29268
+Pune	36203

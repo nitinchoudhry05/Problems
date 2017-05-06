@@ -1,0 +1,746 @@
+use xebia;
+select count(distinct sub_district) as Dcount,district from aadhaar group by district order by Dcount; 
+1	West Garo Hills
+1	Jaintia Hills
+1	Ukhrul
+1	Budgam
+1	Baudh
+1	East Kameng
+1	Serchhip
+1	Gariyaband 
+1	Shupiyan
+1	Mungeli 
+1	Tawang
+1	district
+1	Amta - II
+1	Saiha
+1	West Siang
+1	Domjur
+1	Champhai
+1	Najafgarh
+1	East Siang
+1	Others
+1	Bandipur
+1	Lunglei
+1	Nicobar
+1	Tiswadi
+1	Tuticorin
+1	Samba
+1	Surajpur 
+1	Ponda
+1	Bicholim
+1	Dakshin Gangotri
+1	Narayanpur
+1	Mammit
+1	North Cachar Hills
+1	West Khasi Hills
+1	Tirap
+1	Yanam
+1	Bardez
+1	Longleng
+1	Ri Bhoi
+2	Ganderbal
+2	Lohit
+2	Mahendragarh
+2	North Sikkim
+2	Daman
+2	Tuensang
+2	Chamrajnagar
+2	Namsai
+2	West Sikkim
+2	Sant Ravidas Nagar Bhadohi
+2	Chirang
+2	Chennai
+2	Champawat
+2	Kolasib
+2	Sant Ravidas Nagar
+2	Lower Subansiri
+2	Sukma
+2	The Dangs
+2	Kasargod
+2	Dadra and Nagar Haveli
+2	Kishtwar
+2	Changlang
+2	Kaithal
+2	Kargil
+2	Kasaragod
+2	Dantewada
+2	Shaheed Bhagat Singh Nagar
+2	Barnala
+2	Kawardha
+2	Umaria
+2	Pathankot
+2	Upper Siang
+2	Shamli
+2	Chandigarh
+2	Mohali
+2	Anjaw
+2	Alirajpur
+2	New Delhi
+2	South Sikkim
+2	Kasganj
+2	Ramban
+2	Kulgam
+2	Leh
+2	Reasi
+3	Darrang
+3	Singrauli
+3	East Sikkim
+3	Kurung Kumey
+3	Jaisalmer
+3	Punch
+3	Ariyalur
+3	Mungeli
+3	Maharajganj
+3	Chitrakoot
+3	Lower Dibang Valley
+3	East Garo Hills
+3	Varanasi
+3	Kamrup Metro
+3	Panchkula
+3	Anugul
+3	Bandipore
+3	Sri Muktsar Sahib
+3	North East Delhi
+3	Kokrajhar
+3	Karaikal
+3	Rohtak
+3	Fazilka
+3	Goalpara
+3	Lalitpur
+3	Diu
+3	Auraiya
+3	Hardwar
+3	Haridwar
+3	Meerut
+3	Shrawasti
+3	Gir Somnath
+3	Mahrajganj
+3	Hailakandi
+3	Mumbai City
+3	Marigaon
+3	Nawanshahr
+3	Bongaigaon
+3	Sambhal
+3	Datia
+3	Bhopal
+3	Fatehabad
+3	Panipat
+3	Bengaluru
+3	Unakoti
+3	Yamuna Nagar
+3	Hapur
+3	Debagarh
+3	North East
+3	Karbi Anglong
+3	North And Middle Andaman
+3	South Andaman
+3	Amroha
+3	Kupwara
+3	West Kameng
+3	Devbhumi Dwarka
+4	Baksa
+4	Chikmagalur
+4	Nilgiris
+4	Anuppur
+4	North Delhi
+4	Farrukhabad
+4	Dhamtari
+4	Muktsar
+4	Faridkot
+4	Firozpur
+4	Shahjahanpur
+4	Mon
+4	Burhanpur
+4	Chamrajanagar
+4	Sant Kabir Nagar
+4	Kannauj
+4	Rewari
+4	Porbandar
+4	Sonbhadra
+4	Jhajjar
+4	Central Delhi
+4	Dindori
+4	Bageshwar
+4	Kurukshetra
+4	Harda
+4	Ambala
+4	Rudraprayag
+4	Jyotiba Phule Nagar
+4	Kabeerdham
+4	Katni
+4	Karimganj
+4	Mahoba
+4	Neemuch
+4	Jind
+4	Kanniyakumari
+4	Boudh
+4	Mansa
+4	Mathura
+4	Basti
+4	Baghpat
+4	Chandauli
+4	Narmada
+4	Ashok Nagar
+4	Gomati
+4	Golaghat
+5	Bangalore
+5	Yadgir
+5	Tinsukia
+5	Kaushambi
+5	Udham Singh Nagar
+5	Kapurthala
+5	Idukki
+5	Dakshin Bastar Dantewada
+5	Fatehgarh Sahib
+5	Korba
+5	Nuapada
+5	Lakshadweep
+5	Sirsa
+5	Khowai
+5	Hisar
+5	Kodagu
+5	Mahasamund
+5	Lakhimpur
+5	Lahul and Spiti
+5	Banswara
+5	Wayanad
+5	Mau
+5	Pilibhit
+5	Uttarkashi
+5	Mainpuri
+5	Perambalur
+5	Kushinagar
+5	Jabalpur
+5	Palwal
+5	Krishnagiri
+5	Chamarajanagar
+5	Pulwama
+5	Tapi
+5	Mewat
+5	Bhabua
+5	Puducherry
+5	Gwalior
+5	Mumbai( Sub Urban )
+5	Malkangiri
+5	Mirzapur
+5	Pakaur
+5	Arvalli
+5	Ramanagar
+5	Jalaun
+5	Dhemaji
+5	Imphal East
+5	Dungarpur
+5	Dehradun
+5	Gandhinagar
+5	Udupi
+5	Jamtara
+5	Kanyakumari
+5	Sepahijala
+5	Sheopur
+5	Mandla
+5	Ghaziabad
+5	Saharanpur
+5	Vijayapura
+5	Dhule
+5	Bathinda
+5	Sonipat
+5	Andamans
+5	Gautam Buddha Nagar
+5	Balod
+5	Kodarma
+5	Udhampur
+5	Bemetara
+5	Srinagar
+5	Fatehpur
+5	Amethi
+5	East Khasi Hills
+5	Bahraich
+5	Hathras
+5	Almora
+6	Kathua
+6	Surajpur
+6	Khandwa
+6	Bara Banki
+6	Faridabad
+6	Siddharthnagar
+6	Rae Bareli
+6	Dhalai
+6	Tamenglong
+6	Jammu
+6	Chandel
+6	Lohardaga
+6	Koderma
+6	Jhansi
+6	Namakkal
+6	Kottayam
+6	Bilaspur 
+6	Bishnupur
+6	Nainital
+6	Imphal West
+6	Etawah
+6	Aizawl
+6	Banda
+6	Ballari
+6	Bidar
+6	Palakkad
+6	Dharwad
+6	Churachandpur
+6	Tehri Garhwal
+6	Jorhat
+6	Ambedkar Nagar
+6	Gurdaspur
+6	Phek
+6	Tirupur
+6	Bijapur(KAR)
+6	Sirohi
+6	Navsari
+6	Kondagaon
+6	Upper Subansiri
+6	Lakhisarai
+6	Muzaffarnagar
+6	Kanker
+6	West Delhi
+6	Bastar
+6	Thoubal
+6	Dausa
+6	Dhubri
+6	Sehore
+6	Cachar
+6	Jehanabad
+6	Sheohar
+6	Patiala
+6	Panna
+6	Karur
+6	Kheri
+6	Baloda Bazar
+6	Gariyaband
+6	Faizabad
+6	South Delhi
+6	Deoria
+6	Hoshiarpur
+6	Gadag
+6	Karnal
+6	Thiruvananthapuram
+6	Ramgarh
+6	The Nilgiris
+6	Udalguri
+6	Uttar Bastar Kanker
+6	Kalaburagi
+6	Dholpur
+6	SAS Nagar (Mohali)
+6	Koriya
+6	Mandsaur
+6	Moga
+6	Bundi
+6	Bijnor
+6	Thoothukudi
+6	Nalbari
+6	Jhunjhunu
+6	Moradabad
+6	Sonitpur
+7	Dimapur
+7	Bulandshahar
+7	Karauli
+7	Papum Pare
+7	Pauri Garhwal
+7	Jhunjhunun
+7	Rampur
+7	Chikkamagaluru
+7	Narsinghpur
+7	Jodhpur
+7	Gonda
+7	Sikar
+7	Lucknow
+7	Ramanathapuram
+7	Dibrugarh
+7	Pakur
+7	Jalor
+7	Jalandhar
+7	Palghar
+7	Kollam
+7	Rupnagar
+7	Arwal
+7	Kozhikode
+7	Tiruppur
+7	Koppal
+7	Tiruvannamalai
+7	Aligarh
+7	Seoni
+7	Firozabad
+7	Latehar
+7	Hingoli
+7	Churu
+7	Damoh
+7	Shivamogga
+7	Surguja
+7	Bijapur
+7	Theni
+7	Tikamgarh
+7	Thiruvarur
+7	Sheikhpura
+7	Kota
+7	Morena
+7	Doda
+7	Ratlam
+7	Chamoli
+7	Barwani
+7	Ghazipur
+7	Sonapur
+7	Dewas
+7	Sibsagar
+7	Budaun
+7	Dohad
+7	Tiruvarur
+7	Washim
+7	Ballia
+7	Betul
+7	Dahod
+7	Hasan
+7	Mysuru
+7	Indore
+7	Pathanamthitta
+7	Rajouri
+7	Garhwal
+7	Ahmadabad
+7	Balaghat
+7	Nandurbar
+8	Raichur
+8	Bhind
+8	Sangrur
+8	Ferozepur
+8	Davangere
+8	Akola
+8	Jhabua
+8	Rajgarh
+8	Rajsamand
+8	Shahdol
+8	Etah
+8	Rewa
+8	Malappuram
+8	Kanpur Dehat
+8	Unnao
+8	Hanumangarh
+8	Barpeta
+8	Kannur
+8	Bhandara
+8	Hardoi
+8	Hazaribag
+8	Sivaganga
+8	Tarn Taran
+8	Jagatsinghapur
+8	Hoshangabad
+8	Gondia
+8	Bhiwani
+8	South Dinajpur
+8	Amritsar
+8	Barabanki
+8	Senapati
+8	Janjgir Champa
+8	Agra
+8	Shivpuri
+8	Dakshin Dinajpur
+8	Badgam
+8	Madurai
+8	Sitapur
+8	Valsad
+8	Pithoragarh
+8	North Goa
+8	Kendrapara
+8	Sawai Madhopur
+8	Bulandshahr
+8	Jhalawar
+8	Jaunpur
+8	Simdega
+8	Tonk
+8	Bangalore Rural
+8	Kohima
+8	Chitradurga
+8	Patan
+8	Kishanganj
+9	Anantnag
+9	Bharuch
+9	Nagaon
+9	Balrampur
+9	Baramula
+9	North Tripura
+9	Kamrup
+9	Jharsuguda
+9	Raisen
+9	Nabarangapur
+9	Bellary
+9	Nayagarh
+9	Kanchipuram
+9	Virudhunagar
+9	Khargone
+9	Kolkata
+9	Zunheboto
+9	Jalna
+9	Jashpur
+9	Vidisha
+9	Bagalkot
+9	Belagavi
+9	Anand
+9	Sahibganj
+9	Dhar
+9	Sindhudurg
+9	Thoothukkudi
+9	Osmanabad
+9	Ujjain
+9	Shajapur
+9	Thanjavur
+9	Khagaria
+9	Barmer
+9	Gajapati
+9	Mandya
+9	Gurgaon
+9	Karim Nagar
+9	Viluppuram
+9	Chickmagalur
+9	Mokokchung
+9	Gondiya
+9	Sultanpur
+9	Raipur
+9	Baran
+9	Erode
+9	Wardha
+9	Bikaner
+9	Deoghar
+9	Satna
+9	North West Delhi
+9	Rayagada
+9	Khunti
+9	Uttar Dinajpur
+9	Nagapattinam
+9	Godda
+9	Aurangabad(BH)
+9	Azamgarh
+10	Kalahandi
+10	Villupuram
+10	Mysore
+10	Ajmer
+10	Durg
+10	Sidhi
+10	Tiruchirappalli
+10	Ratnagiri
+10	Parbhani
+10	Jamui
+10	Dharmapuri
+10	Gorakhpur
+10	Chikkaballapur
+10	Seraikela-Kharsawan
+10	Jajapur
+10	Dakshina Kannada
+10	Munger
+10	Kanpur Nagar
+10	Salem
+10	Guna
+10	Dindigul
+10	East Delhi
+10	Chhindwara
+10	Cuddalore
+10	Pondicherry
+10	Araria
+10	Ganganagar
+10	Tumakuru
+10	Pratapgarh
+10	Sagar
+10	Wokha
+10	Rajnandgaon
+10	Shimoga
+10	Pali
+10	Chhatarpur
+10	South Tripura
+10	Mahesana
+11	Udaipur
+11	Kheda
+11	Dumka
+11	Gulbarga
+11	Ahmedabad
+11	Dhanbad
+11	North Dinajpur
+11	Surendranagar
+11	Raebareli
+11	Chatra
+11	Nagaur
+11	Una
+11	Janjgir-champa
+11	Haveri
+11	Tiruvallur
+11	Bareilly
+11	Jamnagar
+11	Amreli
+11	Panchmahal
+11	Kachchh
+11	Dhenkanal
+11	Bharatpur
+11	Alappuzha
+11	Sahebganj
+12	Saharsa
+12	Solapur
+12	Satara
+12	Vadodara
+12	Ernakulam
+12	Bhavnagar
+12	Palamu
+12	Kandhamal
+12	Allahabad
+12	Panchmahals
+12	Kaimur (Bhabua)
+12	Pudukkottai
+12	Chittorgarh
+12	Vellore
+12	Supaul
+12	Coimbatore
+12	Hassan
+12	Latur
+12	Kolar
+13	Balangir
+13	Beed
+13	Tumkur
+13	Kinnaur
+13	Sambalpur
+13	Belgaum
+13	Ludhiana
+13	Banka
+13	Banaskantha
+13	Surendra Nagar
+13	Solan
+13	Bokaro
+13	South Goa
+13	Bhilwara
+13	Bhadrak
+13	Alwar
+13	Kullu
+13	Tirunelveli
+14	Ahmadnagar
+14	Kolhapur
+14	Ahmednagar
+14	Raigad
+14	Madhepura
+14	Gadchiroli
+14	Sangli
+14	Bargarh
+14	Uttara Kannada
+14	Puri
+14	Sabarkantha
+15	Hazaribagh
+15	Hamirpur
+15	Giridih
+15	Buxar
+15	Jalpaiguri
+15	Palamau
+15	Koraput
+15	Darjeeling
+15	Nawada
+16	Gumla
+16	Amravati
+16	Khordha
+16	West Tripura
+16	South West Delhi
+16	Buldhana
+16	Chandrapur
+16	Surat
+16	Pune
+16	Chamba
+16	Nagpur
+16	Rajkot
+16	Kancheepuram
+16	Nashik
+16	Raigarh(MH)
+16	Ahmed Nagar
+16	Jaipur
+17	East Singhbhum
+17	Jalgaon
+17	Garhwa
+17	Purulia
+17	Vaishali
+17	Bilaspur
+17	Angul
+17	Khorda
+17	Hyderabad
+17	Bhojpur
+17	Cooch Behar
+17	Kendujhar
+17	Junagadh
+18	Yavatmal
+18	Sitamarhi
+18	Baleswar
+18	Bhagalpur
+18	Katihar
+18	Nanded
+18	South Twenty Four Parganas
+19	Purnia
+19	Gopalganj
+19	West Singhbhum
+19	West Champaran
+19	Cuttack
+20	Aurangabad
+20	Darbhanga
+20	Muzaffarpur
+20	Rohtas
+20	Begusarai
+21	Ranchi
+21	Siwan
+21	Sirmaur
+21	Puruliya
+21	Bankura
+21	Birbhum
+22	Thrissur
+22	Ganjam
+22	Malda
+23	Samastipur
+23	Hooghly
+23	Saran
+24	Nadia
+24	Madhubani
+25	Paschim Medinipur
+26	Medinipur
+26	Gaya
+26	Raigarh
+26	Nalanda
+28	Purba Medinipur
+28	Howrah
+28	Mayurbhanj
+29	Sundergarh
+29	K.V.Rangareddy
+31	Bardhaman
+32	Murshidabad
+32	East Champaran
+33	Thane
+33	Mandi
+33	West Midnapore
+34	Patna
+34	East Midnapore
+35	Vizianagaram
+35	Shimla
+35	Kangra
+35	Mumbai
+37	Ranga Reddy
+37	Barddhaman
+38	K.v. Rangareddy
+39	Nizamabad
+40	Srikakulam
+41	Mahabub Nagar
+42	North 24 Parganas
+42	South 24 Parganas
+44	Visakhapatnam
+47	Nellore
+47	Medak
+50	Khammam
+51	Krishna
+52	West Godavari
+53	Warangal
+53	Cuddapah
+54	Adilabad
+55	Kurnool
+57	Prakasam
+59	Guntur
+59	Karimnagar
+60	Nalgonda
+61	Mahbubnagar
+62	East Godavari
+63	Ananthapur
+63	Anantapur
+64	Mahabubnagar
+68	Chittoor
