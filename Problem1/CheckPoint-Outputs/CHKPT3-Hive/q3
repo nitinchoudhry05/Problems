@@ -1,0 +1,3 @@
+use xebia;
+select sum( int(email_id) +mobile_number) from aadhaar where email_id!="0" or mobile_number!=0;
+1480938

@@ -1,0 +1,5 @@
+use xebia;
+select  state,sum(aadhaar_generated) as count from aadhaar group by state order by count  desc limit 3 ;
+Maharashtra	951201.0
+Uttar Pradesh	385463.0
+Andhra Pradesh	270055.0

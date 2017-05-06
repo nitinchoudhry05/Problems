@@ -1,0 +1,5 @@
+use xebia;
+select sum(aadhaar_generated) as enrolled ,district from aadhaar group by district order by enrolled desc limit 3;
+140851.0	Pune
+114755.0	Mumbai
+99296.0	Nagpur
