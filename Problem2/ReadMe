@@ -1,0 +1,34 @@
+									Mobile Price Crawler
+
+ 
+
+Mobile  Price Crawler is a program to crawl prices of a different Handsets over differnt  shoping sites. It makes it easy for the buyers to get prices listed for a device over differnt sites at one common location.
+Currently Mobile Price Crawler supports three websites namely:-
+1.Amazon
+2.Snapdeal
+3.Paytm
+
+For Sample Purpose right now it is able to calculte prices for following devices as of now.
+
+1.Apple Iphone 7
+2.Apple Iphone 6s
+3.Moto G4
+4.Google Pixel
+5.Iphone 5s
+
+
+How To Run:
+
+	Depencies To Download- Beautiful Soup (Source:https://pypi.python.org/pypi/beautifulsoup4)
+	
+	Command : python Crawler/Driver.py 
+	Result On any Browser Of that Machine: http://127.0.0.1:5000/MobilePrices 
+
+
+Once the command is  Fired the results can be seen on browser at http://127.0.0.1:5000/MobilePrices
+	
+Screen Shot for the Results on browser is also availble in this folder.
+
+	
+
+
