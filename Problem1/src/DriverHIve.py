@@ -4,6 +4,8 @@ Created on 05-May-2017
 @author: nitinchoudhry
 '''
 
+import sys
+sys.path.append("../")
 from Resources import Cleaner
 from Hive import HiveExecutor
 
@@ -37,7 +39,7 @@ if __name__ == '__main__':
     
     try:
         Driver=Driver()
-        Driver.Run()        
+        #Driver.Run()        
     except Exception ,e:
         print "Exception Encountered While Running The Driver" 
         print e

@@ -2,6 +2,8 @@
 author="Nitin Choudhry"
 
 """
+import sys
+sys.path.append("../")
 from Resources import pyhs2
 
 class hivetable:

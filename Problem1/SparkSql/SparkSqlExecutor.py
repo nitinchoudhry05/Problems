@@ -3,6 +3,8 @@ Created on 05-May-2017
 
 @author: nitinchoudhry
 '''
+import sys
+sys.path.append("../")
 from pyspark.sql import SparkSession
 from Resources.Logger import *
 from pyspark import SQLContext

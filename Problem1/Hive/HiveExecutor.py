@@ -2,6 +2,8 @@
 Created on 05-May-2017
 @author: nitinchoudhry
 '''
+import sys
+sys.path.append("../")
 from Resources.Logger import *
 import pyhs2
 
@@ -9,9 +11,9 @@ import pyhs2
 class HiveExecutor(object):
     
     
-    def __init__(self,hiveserver="",port="10000",user="hive",paswword="hive@123",dbname="default",QueryFile="../Configs/HiveQueries"):
+    def __init__(self,hiveserver="localhost",port="10000",user="hadoop",paswword="",dbname="xebia",QueryFile="../Configs/HiveQueries"):
         
-        self.QueryFile=QueryFile
+        self.QueryFile=open(QueryFile,"r")
         self.hiveServer = hiveserver
         self.port = port
         self.user = user
@@ -24,7 +26,6 @@ class HiveExecutor(object):
                                   password=self.password,
                                   database=self.dbname)
         self.Cursor=Connection.cursor()
-        
         
         
         

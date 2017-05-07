@@ -3,7 +3,8 @@ Created on 06-May-2017
 
 @author: nitinchoudhry
 '''
-
+import sys
+sys.path.append("../")
 from Resources import Cleaner
 from Spark import  SparkExecutor
 

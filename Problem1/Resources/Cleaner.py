@@ -3,6 +3,8 @@ Created on 05-May-2017
 
 @author: nitinchoudhry
 '''
+import sys
+sys.path.append("../")
 import commands
 import os
 
