@@ -6,8 +6,8 @@ Created on 06-May-2017
 
 import sys
 sys.path.append("../")
-from Resources import Cleaner
-from SparkSql import SparkSqlExecutor
+from Resources.Cleaner import *
+from SparkSql.SparkSqlExecutor import *
 
 
 class Driver(object):

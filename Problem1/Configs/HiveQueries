@@ -1,0 +1,6 @@
+select state,sum(aadhaar_generated) as count from aadhaar group by state order by count desc limit 3 ;
+select private_agency,sum(aadhaar_generated) as male_cnt from aadhaar group by private_agency order by male_cnt desc limit 3 ;
+select sum( int(email_id) +mobile_number) from aadhaar where email_id!="0" or mobile_number!=0;
+select sum(aadhaar_generated) as enrolled ,district from aadhaar group by district order by enrolled desc limit 3;
+select state,sum(aadhaar_generated) as count from aadhaar group by state;
+

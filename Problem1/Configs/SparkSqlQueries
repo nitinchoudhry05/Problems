@@ -1,0 +1,8 @@
+describe Test;
+select distinct district,count(district) as count from Test group by district order by count;
+select count(distinct state) from Test;
+select count(distinct district) as Dcount,state from Test group by state order by Dcount;
+select count(distinct sub_district) as Dcount,district from Test group by district order by Dcount;
+select sum(case when gender='M' then Test_generated end) as male_cnt,sum(case when gender='F' then Test_generated end) as female_cnt,state from Test group by state;
+select distinct private_agency,state from Test order by state;
+select count(distinct private_agency),state from Test group by state;

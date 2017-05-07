@@ -6,26 +6,25 @@ Created on 05-May-2017
 
 import sys
 sys.path.append("../")
-from Resources import Cleaner
-from Hive import HiveExecutor
+from Resources.Cleaner import *
+from Hive.HiveExecutor import *
 
 class Driver(object):
     
     def __init__(self):
         
-        try:
+        #try:
             self.Hive=HiveExecutor()
             self.Cleaner=Cleaner("HiveLogs")
             self.Run()
             
-        except Exception,e:
-            print "Exception Encountered while initiating the Driver"
-            print str(e)
+        #except Exception,e:
+            #print "Exception Encountered while initiating the Driver"
+            #print str(e)
     
     def Run(self):
         print "Please Check Output Folder to Check Running Hive Commands "
         self.Hive.Run()
-        Lines=self.ConfigFile.readlines()
                 
     
     
@@ -37,12 +36,12 @@ class Driver(object):
 
 if __name__ == '__main__':
     
-    try:
-        Driver=Driver()
+    #try:
+        driver=Driver()
         #Driver.Run()        
-    except Exception ,e:
-        print "Exception Encountered While Running The Driver" 
-        print e
+    #except Exception ,e:
+        #print "Exception Encountered While Running The Driver" 
+        #print e
                
 
         

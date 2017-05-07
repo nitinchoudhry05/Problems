@@ -37,7 +37,7 @@ class HiveExecutor(object):
         Lines=self.QueryFile.readlines()
         try:
             for line in Lines:
-                self.RunHiveCommand(line.strip("\n"))
+                self.RunHiveCommand(line.strip("\n").strip(";"))
         
             self.Cursor.close()
         except Exception,e:

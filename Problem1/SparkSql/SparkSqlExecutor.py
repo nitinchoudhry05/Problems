@@ -11,7 +11,7 @@ from pyspark import SQLContext
 
 class SparkSqlExecutor():
     
-    def __init__(self,SrcFile="../Configs/aadhar_data.csv",QueryFile="../Configs/SparkSqlQueries",tablename="Test"):
+    def __init__(self,SrcFile="../Configs/aadhaar_data.csv",QueryFile="../Configs/SparkSqlQueries",tablename="Test"):
     
         self.QueryFile=open(QueryFile,"r")
         self.SrcFile=SrcFile
