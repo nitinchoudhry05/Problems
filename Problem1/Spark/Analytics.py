@@ -15,7 +15,7 @@ from pyspark.sql.functions import *
 
 class Analytics():
     
-    def __init__(self,SrcFile="../Configs/aadhar_data.csv"):
+    def __init__(self,SrcFile="../Configs/aadhaar_data.csv"):
 
         print "Analytics Initiated"
         print "Using Src File %s for Pyspark Analytics" %SrcFile     

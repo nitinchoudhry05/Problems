@@ -13,7 +13,7 @@ from pyspark.sql.functions import *
 
 class SparkExecutor():
     
-    def __init__(self,SrcFile="../Configs/aadhar_data.csv"):
+    def __init__(self,SrcFile="../Configs/aadhaar_data.csv"):
 
         print "PySpark Executor Initiated"
         print "Using Src File %s for PySpark Analytics" %SrcFile     
@@ -32,6 +32,9 @@ class SparkExecutor():
         self.df.createOrReplaceTempView("TestTable")
         try:        
             self.Problem1()
+	    self.Problem2()
+	    self.Problem3()
+	    self.Problem4()
         
         except Exception,e:    
             self.logger.error("Exception Encountered while executing the Problems")
