@@ -54,7 +54,7 @@ class HiveExecutor(object):
             self.logger.info("#######################Result#################")
             Result=""
             for i in self.Cursor.fetch():
-                Result+= i+"\n"
+                Result+= str(i)+"\n"
         
                              
             self.logger.info(Result)
