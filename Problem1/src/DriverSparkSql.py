@@ -16,7 +16,7 @@ class Driver(object):
         try:
             
             self.SparkSql=SparkSqlExecutor()
-            self.Cleaner=Cleaner("SparkSql")
+            self.Cleaner=Cleaner("SparkSqlLogs")
             self.Run()
         except Exception,e:
             print "Exception Encountered while initiating the Driver"

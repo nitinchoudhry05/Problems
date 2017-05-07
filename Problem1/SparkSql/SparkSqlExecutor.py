@@ -11,7 +11,7 @@ class SparkSqlExecutor():
     
     def __init__(self,SrcFile="../Configs/aadhar_data.csv",QueryFile="../Configs/SparkSqlQueries",tablename="Test"):
     
-        self.QueryFile=QueryFile
+        self.QueryFile=open(QueryFile,"r")
         self.SrcFile=SrcFile
         self.spark=SparkSession.builder.appName("Python Spark SQL basic example").config("spark.some.config.option", "some-value") .getOrCreate()
         self.table=tablename
@@ -23,35 +23,20 @@ class SparkSqlExecutor():
         logs("../Output/SparkSqlLogs")
         self.logger=Initiate_logger("SparkSqlLogs")
         Lines=self.QueryFile.readlines()
-        
         df=self.sequelcontext.read.format('com.databricks.spark.csv').options(header='true', inferschema='true').load(self.SrcFile)
-        df.createOrReplaceTempView("TestTable")
+        df.createOrReplaceTempView(self.table)
         try:
             for line in Lines:
-                self.RunSparkSqlCommand(line.strip("\n").strip(","))
-        
+                self.logger.info("Running command :"+line)
+                print "Running command :"+line
+                sqlDF = self.spark.sql(line.strip("\n").strip(";"))
+                sqlDF.coalesce(1).write.format("com.databricks.spark.csv").option("header", "true").mode("append").save("../Output/SparkSqlResutls")
+                self.logger.info("Successfully Ran :"+line)
         except Exception,e:
             self.logger.error("Exception Encountered while Running Hive Queries")
             self.logger.error("Exception:"+str(e))
     
     
-    def RunSparkSqlCommand(self,Query):
-        
-        self.logger.info("Executing Query :"+Query)
-        
-        
-        try:
-            sqlDF = self.spark.sql(Query)
-            
-            self.logger.info("#######################Result#################")        
-                             
-            self.logger.info(sqlDF.show())
-            
-        except Exception,e:
-            self.logger.error("Failure While Execution of Query")
-            self.logger.error(str(e))
-            
-        
     
         
         
