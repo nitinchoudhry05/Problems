@@ -13,7 +13,7 @@ class Driver(object):
         
         try:
             self.Spark=SparkExecutor()
-            self.Cleaner=Cleaner("Spark")
+            self.Cleaner=Cleaner("SparkLogs")
             self.Run()
         except Exception,e:
             print "Exception Encountered while initiating the Driver"

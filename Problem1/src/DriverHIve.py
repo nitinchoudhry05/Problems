@@ -13,7 +13,7 @@ class Driver(object):
         
         try:
             self.Hive=HiveExecutor()
-            self.Cleaner=Cleaner("Hive")
+            self.Cleaner=Cleaner("HiveLogs")
             self.Run()
             
         except Exception,e:
