@@ -52,7 +52,6 @@ class Analytics():
         self.OneResult.show()
         
         
-        self.df.describe().show()
         
         
         
@@ -64,7 +63,7 @@ class Analytics():
         for row in self.OneResult.collect():
             state=row["state"]
             self.second=self.df.select("rejected","district").filter("state='"+state+"'").filter("gender='F'").groupby("district").sum()
-            self.secondResult=self.second.sort(self.third[1].desc()).limit(3)
+            self.secondResult=self.second.sort(self.second[1].desc()).limit(3)
             self.secondResult.show()
         
 
@@ -88,11 +87,13 @@ class Analytics():
         for row in self.thirdResultResult.collect():
             state=row["state"]
             self.fourth=self.df.select("rejected","district").filter("state='"+state+"'").filter("gender='M'").groupby("district").sum()
-            self.fourthResult=self.fourth.sort(self.third[1].desc()).limit(3)
+            self.fourthResult=self.fourth.sort(self.fourth[1].desc()).limit(3)
             self.fourthResultResult.show()
             
             
             
-            
+
+    def Problem5(self):
+	pass            
             
         
