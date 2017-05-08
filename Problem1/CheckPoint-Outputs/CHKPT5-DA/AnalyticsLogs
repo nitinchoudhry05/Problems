@@ -1,0 +1,900 @@
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,653 send_command:: Command to send: c
+o25
+read
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,655 send_command:: Answer received: !yro38
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,656 send_command:: Command to send: c
+o38
+format
+scom.databricks.spark.csv
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,656 send_command:: Answer received: !yro39
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,656 send_command:: Command to send: c
+o39
+option
+sheader
+strue
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,657 send_command:: Answer received: !yro40
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,657 send_command:: Command to send: c
+o40
+option
+sinferschema
+strue
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,657 send_command:: Answer received: !yro41
+DEBUG : py4j.java_gateway 2017-05-08 05:04:28,657 send_command:: Command to send: c
+o41
+load
+s../Configs/aadhaar_data.csv
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,654 send_command:: Answer received: !yro42
+INFO : AnalyticsLogs 2017-05-08 05:04:31,654 Run:: Successfully Created Data frame  from Src File
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,654 send_command:: Command to send: c
+o42
+createOrReplaceTempView
+sTestTable
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,912 send_command:: Answer received: !yv
+INFO : AnalyticsLogs 2017-05-08 05:04:31,913 Problem1:: The top 3 states where the percentage of Aadhaar cards being generated for males is the highest.
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,913 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,915 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,915 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,916 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,916 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+saadhaar_generated
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,923 send_command:: Answer received: !yro43
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,923 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,924 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,924 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,924 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,924 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+sstate
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,925 send_command:: Answer received: !yro44
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,925 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,926 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,926 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,926 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,926 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,927 send_command:: Answer received: !ylo45
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,927 send_command:: Command to send: c
+o45
+add
+ro43
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,927 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,927 send_command:: Command to send: c
+o45
+add
+ro44
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro45
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Answer received: !yro46
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Command to send: m
+d
+o45
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,928 send_command:: Command to send: c
+o42
+select
+ro46
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,944 send_command:: Answer received: !yro47
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,944 send_command:: Command to send: c
+o47
+filter
+sgender='M'
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,972 send_command:: Answer received: !yro48
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,972 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,973 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,973 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,973 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,973 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+sstate
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,974 send_command:: Answer received: !yro49
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,974 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,974 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,974 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Answer received: !ylo50
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Command to send: c
+o50
+add
+ro49
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro50
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Answer received: !yro51
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,975 send_command:: Command to send: m
+d
+o50
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,976 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,976 send_command:: Command to send: c
+o48
+groupBy
+ro51
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,980 send_command:: Answer received: !yro52
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,981 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,981 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,981 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,981 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Answer received: !ylo53
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro53
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Answer received: !yro54
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Command to send: m
+d
+o53
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:31,982 send_command:: Command to send: c
+o52
+sum
+ro54
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,019 send_command:: Answer received: !yro55
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,019 send_command:: Command to send: c
+o55
+schema
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,019 send_command:: Answer received: !yro56
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,019 send_command:: Command to send: c
+o56
+json
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,038 send_command:: Answer received: !ys{"type":"struct","fields":[{"name":"state","type":"string","nullable":true,"metadata":{}},{"name":"sum(aadhaar_generated)","type":"long","nullable":true,"metadata":{}}]}
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,038 send_command:: Command to send: c
+o55
+apply
+ssum(aadhaar_generated)
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,039 send_command:: Answer received: !yro57
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,039 send_command:: Command to send: c
+o57
+desc
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,041 send_command:: Answer received: !yro58
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,041 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,042 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,042 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,042 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,042 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Answer received: !ylo59
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Command to send: c
+o59
+add
+ro58
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro59
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Answer received: !yro60
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,043 send_command:: Command to send: m
+d
+o59
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,044 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,044 send_command:: Command to send: c
+o55
+sort
+ro60
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,055 send_command:: Answer received: !yro61
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,055 send_command:: Command to send: c
+o61
+limit
+i3
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,061 send_command:: Answer received: !yro62
+DEBUG : py4j.java_gateway 2017-05-08 05:04:32,061 send_command:: Command to send: c
+o62
+showString
+i20
+i20
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,131 send_command:: Answer received: !ys+--------------+----------------------+\n|         state|sum(aadhaar_generated)|\n+--------------+----------------------+\n|   Maharashtra|                498094|\n| Uttar Pradesh|                190263|\n|Andhra Pradesh|                122779|\n+--------------+----------------------+\n
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,132 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,132 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Answer received: !ylo63
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro63
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Answer received: !yro64
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,133 send_command:: Command to send: m
+d
+o63
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,134 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:34,134 send_command:: Command to send: c
+o42
+describe
+ro64
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,656 send_command:: Answer received: !yro65
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,657 send_command:: Command to send: c
+o65
+showString
+i20
+i20
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,689 send_command:: Answer received: !ys+-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+\n|summary|                date|           registrar|      private_agency|               state| district|sub_district|          pincode| gender|               age| aadhaar_generated|           rejected|      mobile_number|          email_id|\n+-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+\n|  count|             1665947|             1665947|             1665947|             1665947|  1665947|     1665947|          1665947|1665947|           1665947|           1665947|            1665947|            1665947|           1665947|\n|   mean|2.0134818139661707E7|                null|                null|                null|     null|        null|457834.4532448198|   null| 33.76943264101439|2.1495299670397676|0.21824043622035996|0.03391704538019517|0.8550296017820495|\n| stddev|  10889.969119510191|                null|                null|                null|     null|        null|203632.0093912346|   null|19.544561890218134| 4.852843341993695| 0.9856906167429488|0.24290500939723664|2.1845471791341247|\n|    min|            20120314|      Allahabad Bank|4G IDENTITY SOLUT...|Andaman and Nicob...| Adilabad|  Munsiyari |           110001|      F|                 0|                 0|                  0|                  0|                 0|\n|    max|            20150817|United Bank of India|i-Grandee Softwar...|         West Bengal|Zunheboto|    vijaypur|           Others|      T|               189|               371|                419|                 32|               171|\n+-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+\n
+INFO : AnalyticsLogs 2017-05-08 05:04:53,689 Problem2:: In each of these 3 states, identify the top 3 districts where the percentage of Aadhaar cards being rejected for females is the highest.
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,690 send_command:: Command to send: c
+o13
+setCallSite
+scollect at ../Spark/Analytics.py:64
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,690 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:53,690 send_command:: Command to send: c
+o62
+collectToPython
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,951 send_command:: Answer received: !yi43954
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,951 send_command:: Command to send: c
+o13
+setCallSite
+n
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,951 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,955 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,956 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,956 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,956 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,956 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+srejected
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,956 send_command:: Answer received: !yro66
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,957 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,957 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,958 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,958 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,958 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+sdistrict
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,958 send_command:: Answer received: !yro67
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,958 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Answer received: !ylo68
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Command to send: c
+o68
+add
+ro66
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,959 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Command to send: c
+o68
+add
+ro67
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro68
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Answer received: !yro69
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Command to send: m
+d
+o68
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,960 send_command:: Command to send: c
+o42
+select
+ro69
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,964 send_command:: Answer received: !yro70
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,964 send_command:: Command to send: c
+o70
+filter
+sstate='Maharashtra'
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,969 send_command:: Answer received: !yro71
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,970 send_command:: Command to send: c
+o71
+filter
+sgender='F'
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,975 send_command:: Answer received: !yro72
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,975 send_command:: Command to send: r
+u
+functions
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,976 send_command:: Answer received: !ycorg.apache.spark.sql.functions
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,976 send_command:: Command to send: r
+m
+org.apache.spark.sql.functions
+col
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,976 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,976 send_command:: Command to send: c
+z:org.apache.spark.sql.functions
+col
+sdistrict
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,977 send_command:: Answer received: !yro73
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,977 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,977 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,977 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,978 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,978 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,978 send_command:: Answer received: !ylo74
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,978 send_command:: Command to send: m
+d
+o17
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Command to send: m
+d
+o18
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Command to send: m
+d
+o19
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Command to send: m
+d
+o20
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Command to send: m
+d
+o23
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,979 send_command:: Command to send: m
+d
+o26
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o27
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o28
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o29
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o32
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o33
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,980 send_command:: Command to send: m
+d
+o34
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Command to send: m
+d
+o35
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Command to send: m
+d
+o38
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Command to send: m
+d
+o39
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Command to send: m
+d
+o40
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,981 send_command:: Command to send: m
+d
+o41
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o43
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o44
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o46
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o47
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o48
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,982 send_command:: Command to send: m
+d
+o49
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o51
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o52
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o54
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o56
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o57
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Command to send: m
+d
+o58
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,983 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o60
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o61
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o64
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o65
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o66
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Command to send: m
+d
+o67
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,984 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Command to send: m
+d
+o69
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Command to send: m
+d
+o70
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Command to send: m
+d
+o71
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,978 send_command:: Command to send: c
+o74
+add
+ro73
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,985 send_command:: Answer received: !ybtrue
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,986 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro74
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,986 send_command:: Answer received: !yro75
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,986 send_command:: Command to send: m
+d
+o74
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,986 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,986 send_command:: Command to send: c
+o72
+groupBy
+ro75
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,988 send_command:: Answer received: !yro76
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,988 send_command:: Command to send: r
+u
+PythonUtils
+rj
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Answer received: !ycorg.apache.spark.api.python.PythonUtils
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+toSeq
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Answer received: !ym
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Command to send: i
+java.util.ArrayList
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Answer received: !ylo77
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+toSeq
+ro77
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Answer received: !yro78
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,989 send_command:: Command to send: m
+d
+o77
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,990 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,990 send_command:: Command to send: c
+o76
+sum
+ro78
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,994 send_command:: Answer received: !yro79
+ERROR : AnalyticsLogs 2017-05-08 05:04:54,994 Run:: Exception Encountered while executing the Problems
+ERROR : AnalyticsLogs 2017-05-08 05:04:54,994 Run:: Exception Analytics instance has no attribute 'third'
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,999 send_command:: Command to send: m
+d
+o75
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,999 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,999 send_command:: Command to send: m
+d
+o76
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:54,999 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Command to send: m
+d
+o78
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Command to send: m
+d
+o14
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Command to send: m
+d
+o0
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Command to send: m
+d
+o73
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Command to send: m
+d
+o72
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,000 send_command:: Answer received: !yv
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,001 send_command:: Command to send: m
+d
+o79
+e
+
+DEBUG : py4j.java_gateway 2017-05-08 05:04:55,001 send_command:: Answer received: !yv

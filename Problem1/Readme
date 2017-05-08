@@ -1,0 +1,84 @@
+Problem-1 is solved with following system requirements
+1. Spark version-2.1.1
+2. Hadoop version >2.6
+3. Hive Configured and Running with postgress or derby used for metastore db
+4. Python dependency-pyhs2(For Hive Connections)
+5. Aadhar_data.csv to be present in Configs/ Folder
+
+
+Output for all the CheckPoints are Present in CheckPoint-Outputs Folder
+
+Description of Various CheckPoint-Outputs along with methods to attain that output
+
+CheckPoint1 Output:
+
+	1.Contains ScreenShots of Data Loaded in HDFS,SparkSql and HIVE
+	
+CheckPoint 2 OutPut:
+
+	1. Contains Screen shot of running spark queries on sparkUI
+	2. Output of SparkSqlQueries from SpaarkSqlShell as well as from the Code written using pyspark
+	How To Run The Code:
+	
+		1. cd src/
+		2. spark-submit DriverSparkSql.py
+		
+		The Above Program will run all the queries in Configs/SparkSqlQueries.
+		The Output will be available in Output/SparkSqlResutls 
+		
+
+CheckPoint 3 OutPut:
+
+	1. Contains Screen shot of running Hive queries on YarnUI
+	2. Output of HiveQueries from HiveShell as well as from the Code written using pyhs2
+	How To Run The Code:
+	
+		1. cd src/
+		2. python DriverHive.py
+		
+		The Above Program will run all the queries in Configs/HiveQueries.
+		The Output will be available in Output/HiveLogs
+		
+	Pre-requisites
+		1.Hive Server Up and Running
+		2.Database- xebia table-aadhaar in hive
+
+
+CheckPoint 3 OutPut:
+
+	1. Contains Output of all the problems in checkPoint as SparkOutput
+	How To Run The Code:
+	
+		1. cd src/
+		2. spark-submit DriverSpark.py>../Output/SparkOutput
+		
+		The Above Program will run all the Problems.
+		The Output will be available in Output/SparkOutput
+		
+
+CheckPoint 4 Output
+
+	1. Contains Output of all the problems in checkPoint as AnalyticsOutPut
+	How To Run The Code:
+	
+		1. cd src/
+		2. spark-submit DriverAnalytics.py>../Output/AnalyticsOutPut
+		
+		The Above Program will run all the Problems.
+		The Output will be available in Output/AnalyticsOutPut
+		
+				 
+		
+		  
+		  
+Special Features
+
+1.Two Libraries Written Hive/HiveExecutor.py and SparSql/SparkSqlExecutor.py  which can help user to simply paste their hive and spark sql-queries in Configs folder
+and simply run the Driver for them.		  
+2.Resources/Logger is there for Extensive Logging
+3.Resources/CommandsUtils for firing Hdfs and Unix Based Commands		  
+		  
+
+
+
+

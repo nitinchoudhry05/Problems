@@ -23,7 +23,7 @@ class Driver(object):
     
     def Run(self):
         print "Please Check Output Folder to Check Running Spark Commands "
-        self.Spark.Run()
+        self.Analytics.Run()
         
 
 

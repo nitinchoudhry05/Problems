@@ -1,0 +1,62 @@
+INFO : HiveLogs 2017-05-08 05:08:08,473 RunHiveCommand:: Executing Query :select state,sum(aadhaar_generated) as count from aadhaar group by state order by count desc limit 3 
+INFO : HiveLogs 2017-05-08 05:11:20,432 RunHiveCommand:: #######################Result#################
+INFO : HiveLogs 2017-05-08 05:11:20,620 RunHiveCommand:: ['Maharashtra', 951201.0]
+['Uttar Pradesh', 385463.0]
+['Andhra Pradesh', 270055.0]
+
+INFO : HiveLogs 2017-05-08 05:11:20,620 RunHiveCommand:: Executing Query :select private_agency,sum(aadhaar_generated) as male_cnt from aadhaar group by private_agency order by male_cnt desc limit 3 
+INFO : HiveLogs 2017-05-08 05:14:30,679 RunHiveCommand:: #######################Result#################
+INFO : HiveLogs 2017-05-08 05:14:30,688 RunHiveCommand:: ['Wipro Ltd', 745751.0]
+['Vakrangee Softwares Limited', 225273.0]
+['Swathy Smartcards Hi-Tech Pvt', 211790.0]
+
+INFO : HiveLogs 2017-05-08 05:14:30,688 RunHiveCommand:: Executing Query :select sum( int(email_id) +mobile_number) from aadhaar where email_id!="0" or mobile_number!=0
+INFO : HiveLogs 2017-05-08 05:16:08,369 RunHiveCommand:: #######################Result#################
+INFO : HiveLogs 2017-05-08 05:16:08,387 RunHiveCommand:: [1480938]
+
+INFO : HiveLogs 2017-05-08 05:16:08,387 RunHiveCommand:: Executing Query :select sum(aadhaar_generated) as enrolled ,district from aadhaar group by district order by enrolled desc limit 3
+INFO : HiveLogs 2017-05-08 05:19:18,550 RunHiveCommand:: #######################Result#################
+INFO : HiveLogs 2017-05-08 05:19:18,558 RunHiveCommand:: [140851.0, 'Pune']
+[114755.0, 'Mumbai']
+[99296.0, 'Nagpur']
+
+INFO : HiveLogs 2017-05-08 05:19:18,558 RunHiveCommand:: Executing Query :select state,sum(aadhaar_generated) as count from aadhaar group by state
+INFO : HiveLogs 2017-05-08 05:20:54,149 RunHiveCommand:: #######################Result#################
+INFO : HiveLogs 2017-05-08 05:20:54,167 RunHiveCommand:: ['Andaman and Nicobar Islands', 636.0]
+['Andhra Pradesh', 270055.0]
+['Arunachal Pradesh', 1178.0]
+['Assam', 891.0]
+['Bihar', 208161.0]
+['Chandigarh', 1978.0]
+['Chhattisgarh', 59764.0]
+['Dadra and Nagar Haveli', 108.0]
+['Daman and Diu', 2479.0]
+['Delhi', 37156.0]
+['Goa', 7979.0]
+['Gujarat', 189685.0]
+['Haryana', 95350.0]
+['Himachal Pradesh', 33844.0]
+['Jammu and Kashmir', 17355.0]
+['Jharkhand', 168855.0]
+['Karnataka', 146013.0]
+['Kerala', 150893.0]
+['Lakshadweep', 15.0]
+['Madhya Pradesh', 171324.0]
+['Maharashtra', 951201.0]
+['Manipur', 47386.0]
+['Meghalaya', 48.0]
+['Mizoram', 323.0]
+['Nagaland', 631.0]
+['Odisha', 34529.0]
+['Others', 609.0]
+['Puducherry', 568.0]
+['Punjab', 65644.0]
+['Rajasthan', 227234.0]
+['Sikkim', 728.0]
+['Tamil Nadu', 131735.0]
+['Telangana', 5130.0]
+['Tripura', 2333.0]
+['Uttar Pradesh', 385463.0]
+['Uttarakhand', 19333.0]
+['West Bengal', 144389.0]
+

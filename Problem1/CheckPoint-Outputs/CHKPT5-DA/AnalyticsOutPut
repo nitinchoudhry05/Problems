@@ -1,0 +1,25 @@
+Analytics Initiated
+Using Src File ../Configs/aadhaar_data.csv for Pyspark Analytics
+Successfully Cleaned the Output Folder
+Please Check Output Folder to Check Running Spark Commands 
+Loger object is created with the name AnalyticsLogs
+The top 3 states where the percentage of Aadhaar cards being generated for males is the highest
++--------------+----------------------+
+|         state|sum(aadhaar_generated)|
++--------------+----------------------+
+|   Maharashtra|                498094|
+| Uttar Pradesh|                190263|
+|Andhra Pradesh|                122779|
++--------------+----------------------+
+
++-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+
+|summary|                date|           registrar|      private_agency|               state| district|sub_district|          pincode| gender|               age| aadhaar_generated|           rejected|      mobile_number|          email_id|
++-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+
+|  count|             1665947|             1665947|             1665947|             1665947|  1665947|     1665947|          1665947|1665947|           1665947|           1665947|            1665947|            1665947|           1665947|
+|   mean|2.0134818139661707E7|                null|                null|                null|     null|        null|457834.4532448198|   null| 33.76943264101439|2.1495299670397676|0.21824043622035996|0.03391704538019517|0.8550296017820495|
+| stddev|  10889.969119510191|                null|                null|                null|     null|        null|203632.0093912346|   null|19.544561890218134| 4.852843341993695| 0.9856906167429488|0.24290500939723664|2.1845471791341247|
+|    min|            20120314|      Allahabad Bank|4G IDENTITY SOLUT...|Andaman and Nicob...| Adilabad|  Munsiyari |           110001|      F|                 0|                 0|                  0|                  0|                 0|
+|    max|            20150817|United Bank of India|i-Grandee Softwar...|         West Bengal|Zunheboto|    vijaypur|           Others|      T|               189|               371|                419|                 32|               171|
++-------+--------------------+--------------------+--------------------+--------------------+---------+------------+-----------------+-------+------------------+------------------+-------------------+-------------------+------------------+
+
+In each of these 3 states, identify the top 3 districts where the percentage of Aadhaar cards being rejected for females is the highest.
