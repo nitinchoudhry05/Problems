@@ -47,3 +47,27 @@ The top 3 states where the percentage of Aadhaar cards being generated for Femal
 +--------------+----------------------+
 
 In each of these 3 states, identify the top 3 districts where the percentage of Aadhaar cards being rejected for males is the highest.
++--------+-------------+
+|district|sum(rejected)|
++--------+-------------+
+|  Nagpur|         2611|
+|   Thane|         2563|
+|  Mumbai|         1714|
++--------+-------------+
+
++---------+-------------+
+| district|sum(rejected)|
++---------+-------------+
+|Ghaziabad|          766|
+|  Lucknow|          640|
+|     Agra|          595|
++---------+-------------+
+
++-------------+-------------+
+|     district|sum(rejected)|
++-------------+-------------+
+|      Kurnool|         4204|
+|   Srikakulam|         1663|
+|Mahabub Nagar|         1646|
++-------------+-------------+
+

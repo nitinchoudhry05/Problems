@@ -84,11 +84,11 @@ class Analytics():
         self.logger.info("In each of these 3 states, identify the top 3 districts where the percentage of Aadhaar cards being rejected for males is the highest.")
         print "In each of these 3 states, identify the top 3 districts where the percentage of Aadhaar cards being rejected for males is the highest."
         
-        for row in self.thirdResultResult.collect():
+        for row in self.thirdResult.collect():
             state=row["state"]
             self.fourth=self.df.select("rejected","district").filter("state='"+state+"'").filter("gender='M'").groupby("district").sum()
             self.fourthResult=self.fourth.sort(self.fourth[1].desc()).limit(3)
-            self.fourthResultResult.show()
+            self.fourthResult.show()
             
             
             
