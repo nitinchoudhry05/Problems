@@ -50,8 +50,10 @@ class SparkExecutor():
         
         
     def Problem2(self):
-        pass
-        
+        self.logger.info("Write a command to see the correlation between age and mobile_number?")
+	print "Write a command to see the correlation between age and mobile_number"
+	sqlDF = self.spark.sql("select age,sum(aadhaar_generated+rejected) as enrolled,sum(mobile_number)as mobile_number,int(age/18) as agegroup from TestTable group by age order by age")
+        sqlDF.show()
 
 
     def Problem3(self):
